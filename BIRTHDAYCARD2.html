@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tiny5&display=swap" rel="stylesheet">
+  <title>Happy Birthday Card</title>
+  <style>
+    body {
+	.arching-text {
+        font-family: "Tiny5", sans-serif;
+ 	font-style: normal;
+        font-size: 30px;
+        text-align: center;
+        animation: arching-animation 3s infinite linear;
+            font-weight: bold;
+            color: pink;
+        }
+
+
+    .card {
+      width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #FFF6FF;
+      border-radius: 10px;
+      box-shadow: 0 0 50px #ee1192;
+      animation: shake 4s;
+    }
+
+    @keyframes shake {
+      0% { transform: rotate(0); }
+      10% { transform: rotate(-10deg); }
+      20% { transform: rotate(10deg); }
+      30% { transform: rotate(-10deg); }
+      40% { transform: rotate(10deg); }
+      50% { transform: rotate(-10deg); }
+      60% { transform: rotate(10deg); }
+      70% { transform: rotate(-10deg); }
+      80% { transform: rotate(10deg); }
+      90% { transform: rotate(-10deg); }
+      100% { transform: rotate(0); }
+    }
+	.sparkles-video {
+      position: cover;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      opacity: 0.8;
+    }
+
+    .card p {
+      font-size: 16px;
+      line-height: 1.5;
+      text-align: center;
+      color: #555555;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+	 <video class="sparkles-video" autoplay loop muted>
+      <source src="https://assets.mixkit.co/videos/18151/18151-720.mp4" type="video/mp4">
+    </video>
+	<div class="arching-text">
+        <p>HAPPY BIRTHDAY J</p>
+	</div>
+    <p>
+      I have never written a birthday greeting from the heart but here I go. Happy Birthday! I honestly don’t know where to begin but I love and is honestly enjoying this journey with you. 💕 You are the sister I have without the relation of blood and this bond is unbreakable. Recently, while I was watching a KDrama I suddenly think about our times together bad, happy, sad, prayer, sorrow and wellbeing  “but wait when did me and Jasi even became friends and I laughed cause our friendship had no timing”. You are strong, confident, outspoken, emotionally intelligent, edifying, competent, beautiful and super genuine. I really do admire you and I will say it over 100 times as needed. I Love You Jasi-ann McGregor. I pray the lord continue to bless our friendship and I pray he keeps watering your seeds because I know when he’s finish you will spur blossoms 🌸💐.
+    </p>
+  </div>
+
+  <script>
+    const card = document.querySelector('.card');
+
+    card.addEventListener('mouseenter', () => {
+      card.style.animation = 'none';
+    });
+
+    card.addEventListener('mouseleave', () => {
+      card.style.animation = 'shake 2s';
+    });
+  </script>
+</body>
+</html>
